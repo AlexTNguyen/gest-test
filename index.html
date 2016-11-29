@@ -1,0 +1,23 @@
+<html>
+<head>
+
+<title>Test of gest.js</title>
+
+<script type="text/javascript" src="gest.min.js"></script>
+<script>
+	gest.options.subscribeWithCallback(function(gesture) {
+	    if(gesture) 
+	    	document.getElementById("direction").innerHTML += " " + gesture.direction; 
+	    else
+	    	document.getElementById("direction").innerHTML += " " + "FAIL";
+	});
+
+	gest.start();
+</script>
+
+
+</head>
+<div id = "direction">DIRECTION</div>
+
+</body>
+</html>
